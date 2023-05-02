@@ -75,7 +75,11 @@ public class Searching{
 
     // The searchPriceRange method searches and displays products within a given price range
     // for a specific category.
-    public void searchPriceRange (Product.ProductCategory category, int maxPrice, int minPrice){
+    public void searchPriceRange (Product.ProductCategory category, Integer maxPrice, Integer minPrice){
+
+        System.out.println("the value of the min price" + minPrice);
+        System.out.println("the value of the max price" + maxPrice);
+
         
         LinkedHashMap<String, Product> productMap;
 
@@ -113,13 +117,13 @@ public class Searching{
         int counter = 0;
         for (String key : productMap.keySet()) {
             Product product = productMap.get(key);
-            if (product.getPrice() >= minPrice && product.getPrice() <= maxPrice) {
-              System.out.println(product);  //product toString method called implicitly
-              counter++;
+            if ((minPrice == null || product.getPrice() >= minPrice) && (maxPrice == null || product.getPrice() <= maxPrice)) {
+                System.out.println(product); // product toString method called implicitly
+                counter++;
             }
-            if (counter == 0) {
-                System.out.println("No products found within the given price range.");
-            }
+        }
+        if (counter == 0) {
+            System.out.println("No products found within the given price range.");
         }
     } 
 }
