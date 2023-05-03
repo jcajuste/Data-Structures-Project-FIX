@@ -168,4 +168,17 @@ public class DecisionHandler{
                 return getCategoryWithSuggestion(suggester, scanner);
         }
     }
+
+    // public static ProperINT (int value, Scanner scanner){
+    //     //write code that checks if the given value input is acually a int value
+
+    //     //and if it is, return the int value
+    //     //if not, return the proper error message
+    //     //write code that prints out the proper error message
+    //     // if (!value == int){
+    //     //     System.out.println("That was not a valid number");
+    //     // }
+    //     return null;
+    // }
+
 }

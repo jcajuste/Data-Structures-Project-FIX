@@ -189,9 +189,11 @@ public class UI
 //    Scanner scanner = new Scanner(System.in);
     Product.ProductCategory catigory = DecisionHandler.getCategory("Searching", scanner);
     System.out.print("Enter the Max price range, EX $100: ");
-    int maxR = scanner.nextInt();
+    Integer maxR = scanner.nextInt();
+    //maxR = Integer.parseInt(maxR);
     System.out.print("Enter the Min price range, EX $50: ");
-    int minR = scanner.nextInt();
+    Integer minR = scanner.nextInt();
+    //minR = Integer.parseInt(minR);
 
     searching.searchPriceRange(catigory,maxR,minR);
     return null;
