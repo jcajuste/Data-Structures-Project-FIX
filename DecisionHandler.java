@@ -169,16 +169,16 @@ public class DecisionHandler{
         }
     }
 
-    // public static ProperINT (int value, Scanner scanner){
-    //     //write code that checks if the given value input is acually a int value
-
-    //     //and if it is, return the int value
-    //     //if not, return the proper error message
-    //     //write code that prints out the proper error message
-    //     // if (!value == int){
-    //     //     System.out.println("That was not a valid number");
-    //     // }
-    //     return null;
-    // }
-
+    //not using
+    public static int ProperINT(int value, Scanner scanner) {
+        int result = 0;
+        try {
+            // use the parseInt method to check if the input value is an integer
+            result = Integer.parseInt(String.valueOf(value));;
+        } catch (NumberFormatException e) {
+            // catch any NumberFormatException that may be thrown
+            System.out.println("Error: Input value is not an integer.");
+        }
+        return result;
+    }
 }
